@@ -2,14 +2,17 @@
  * Valmynd - rétt útfærð
  * ...
  */
- 
 nav {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100vw;
   height: var(--height-nav);
+  padding: 0 calc(var(--spacing) * 2);
   overflow: hidden;
   background-color: var(--color-background-primary);
   border-bottom: var(--border-nav);
@@ -60,4 +63,18 @@ nav .hide-in-mobile {
   @media (width >= 900px) {
     display: inline;
   }
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing);
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+  font-size: var(--font-size-headings);
+}
+
+nav .lambda {
+  font-size: 1.5rem;
+  color: var(--color-accent);
 }
