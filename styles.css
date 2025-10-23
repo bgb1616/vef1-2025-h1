@@ -223,8 +223,12 @@ nav {
   top: 0;
   left: 0;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100vw;
   height: var(--height-nav);
+  padding: 0 calc(var(--spacing) * 2);
   overflow: hidden;
   background-color: var(--color-background-primary);
   border-bottom: var(--border-nav);
@@ -263,12 +267,12 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-  text-decoration: underline;
+  background-color: lightgray;
 }
 
 nav strong {
   font-weight: 500;
-  text-decoration: underline;
+  background-color: lightgray;
 }
 
 nav .hide-in-mobile {
@@ -278,6 +282,20 @@ nav .hide-in-mobile {
   nav .hide-in-mobile {
     display: inline;
   }
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing);
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+  font-size: var(--font-size-headings);
+}
+
+nav .lambda {
+  font-size: 1.5rem;
+  color: var(--color-accent);
 }
 
 /**
@@ -290,6 +308,8 @@ footer {
   padding-top: var(--spacing);
   padding-bottom: var(--spacing);
   background-color: var(--color-accent);
+  display: flex;
+  justify-content: space-between;
 }
 
 footer > .content {
@@ -297,6 +317,8 @@ footer > .content {
   gap: var(--gutter);
   justify-content: center;
   width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 @media (width >= 700px) {
   footer > .content {
@@ -324,6 +346,22 @@ footer ul,
 footer section,
 footer h2 {
   margin-bottom: var(--spacing);
+}
+
+.card-content a.btn {
+  display: inline-block;
+  margin-top: var(--spacing);
+  padding: 0.75em 1.5em;
+  background-color: var(--color-accent);
+  color: var(--color-background-primary);
+  border-radius: var(--border-radius-regular);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.card-content a.btn:hover, .card-content a.btn:focus {
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
 /**
@@ -362,6 +400,31 @@ footer h2 {
 .intro .content h1,
 .intro .content h2 {
   margin-bottom: calc(var(--spacing) * 4);
+}
+.intro .intro .buttons {
+  display: flex;
+  gap: calc(var(--spacing) * 2);
+  justify-content: center;
+  margin-top: calc(var(--spacing) * 2);
+}
+.intro .btn {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  font-weight: 600;
+  border-radius: var(--border-radius-regular);
+  background-color: var(--color-accent);
+  color: var(--color-background-primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.intro .btn:hover, .intro .btn:focus {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+.intro .btn-secondary {
+  background-color: transparent;
+  color: var(--color-background-primary);
+  border: 2px solid var(--color-background-primary);
 }
 
 /**
@@ -522,6 +585,18 @@ table tbody tr:nth-child(2n+1) {
   object-position: 50% 50%;
   border-top-left-radius: var(--border-radius-regular);
   border-top-right-radius: var(--border-radius-regular);
+}
+.card .cards-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+.card .cards {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  gap: calc(var(--spacing) * 2);
+  justify-items: center;
 }
 
 @media (width >= 550px) {
