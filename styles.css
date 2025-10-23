@@ -284,7 +284,23 @@ nav .hide-in-mobile {
   }
 }
 
-nav .logo {
+.nav-toggle {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: #f5f5f5;
+  border: 1px solid #d9d9d9;
+  border-radius: 32px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+}
+.nav-toggle nav .logo {
   display: flex;
   align-items: center;
   gap: var(--spacing);
@@ -292,8 +308,7 @@ nav .logo {
   font-weight: 600;
   font-size: var(--font-size-headings);
 }
-
-nav .lambda {
+.nav-toggle nav .lambda {
   font-size: 1.5rem;
   color: var(--color-accent);
 }
@@ -372,13 +387,14 @@ footer h2 {
   display: flex;
   width: 100%;
   min-height: calc(100vh - var(--height-nav));
-  margin-top: 0;
+  margin-top: 80px;
   color: var(--color-background-primary);
   background-image: url("./myndir/forsíða.avif");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
   background-size: cover;
+  align-items: center;
 }
 .intro .protection {
   position: absolute;
@@ -393,6 +409,7 @@ footer h2 {
   justify-content: center;
   margin: auto;
   font-size: 2em;
+  text-align: center;
 }
 .intro .content h1 {
   margin-top: calc(var(--spacing) * -4);
@@ -521,61 +538,73 @@ table tbody tr:nth-child(2n+1) {
 /**
  * Cards.
  */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
 .cards {
+  max-width: 1200px;
+  width: 100%;
   display: grid;
-  grid-template-rows: auto;
   gap: calc(var(--spacing) * 2);
   justify-items: center;
-  width: 100%;
+  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: row;
+}
+@media (min-width: 700px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .card {
   display: grid;
   gap: var(--spacing);
   width: 100%;
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-regular);
+  box-shadow: var(--shadow-light);
+  overflow: hidden;
 }
-@media (width >= 550px) {
+@media (min-width: 550px) {
   .card {
     grid-template-rows: auto;
-    grid-template-columns: repeat(calc(var(--columns)), 1fr);
+    grid-template-columns: repeat(12, 1fr);
     gap: var(--gutter);
   }
 }
 .card .card-header {
   width: 100%;
+  padding: calc(var(--spacing) * 2);
 }
 .card .card-content {
   display: flex;
   flex: 1;
   flex-direction: column;
   gap: var(--spacing);
+  padding: calc(var(--spacing) * 2);
 }
-@media (width >= 550px) {
+@media (min-width: 550px) {
   .card .card-content {
     grid-column: span 7;
   }
 }
 .card .card-text {
   flex: 1;
+  padding: 1rem;
 }
 .card .card-image {
   order: -1;
   width: 100%;
 }
-@media (width >= 550px) {
+@media (min-width: 550px) {
   .card .card-image {
     grid-column: span 5;
     order: initial;
   }
-}
-.card .card-kicker {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.card .card-title {
-  margin-bottom: 1rem;
-  font-size: 2rem;
 }
 .card .card-image img {
   display: block;
@@ -586,20 +615,18 @@ table tbody tr:nth-child(2n+1) {
   border-top-left-radius: var(--border-radius-regular);
   border-top-right-radius: var(--border-radius-regular);
 }
-.card .cards-container {
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
+.card .card-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
 }
-.card .cards {
-  max-width: 1200px;
-  width: 100%;
-  display: grid;
-  gap: calc(var(--spacing) * 2);
-  justify-items: center;
+.card .card-title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
-@media (width >= 550px) {
+@media (min-width: 550px) {
   .card:nth-child(2n) .card-image {
     order: -1;
   }

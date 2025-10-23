@@ -17,9 +17,6 @@
   justify-items: center;
   grid-template-columns: 1fr;
 
-  display: flex;
-  flex-direction: row;
-
   @media (min-width: 700px) {
     grid-template-columns: repeat(3, 1fr);
   }
