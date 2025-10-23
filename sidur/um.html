@@ -3,10 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🎨</text></svg>"
-    >
+    <link rel="icon"
+      href="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.90em' font-size='90'%3E%F0%9F%8E%A8%3C/text%3E%3C/svg%3E">
     <title>Hópverkefni 1</title>
     <meta
       name="description"
@@ -15,30 +13,33 @@
     <meta property="og:title" content="Forritarafjelagið">
     <meta
       property="og:description"
-      content="Forritarafjelagið er viðfangsefni hópverkefnis 1"
-      >
+      content="Forritarafjelagið er viðfangsefni hópverkefnis 1">
     <meta property="og:image" content="/myndir/Umokkur.avif">
     <link rel="stylesheet" href="../styles.css">
   </head>
 
   <body>
-    <p class="sr-only"><a href="#efni">Beint í efni</a></p>
     <header>
-    <nav>
-    <section class="logo">
-        <span class="lambda">λ</span>
-        <p>Forritarafélagið</p>
-    </section>
-    <section>
-      <ul>
-        <li><a href="../index.html">Forsíða</a></li>
+  <nav>
+    <div class="nav-container">
+      <div class="logo-container">
+        <img src="/myndir/Block.svg" alt="λ Logo" class="logo">
+        <span class="brand-name">Forritarafélagið</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="/index.html">Forsíða</a></li>
         <li><a href="../sidur/lausnir.html">Lausnir</a></li>
-        <li><strong>Um okkur</strong></li>
+        <li><a href="../sidur/um.html"><strong>Um okkur</strong></a></li>
         <li><a href="../sidur/starfsfolk.html">Starfsfólk</a></li>
       </ul>
-    </section>
-    </nav>
-    </header>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+</header>
 
     <div class="wrapper">
 
@@ -103,13 +104,52 @@
           </p>
         </article>
       </section>
-    </main>
+    </div>
       
 
+  <footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <img src="../myndir/Block.svg" alt="λ" class="lambda">
+      <div class="socials">
+        <img src="../myndir/insta.svg" alt="youtube" class="lambda">
+        <img src="../myndir/X Logo.svg" alt="insta" class="lambda">
+        <img src="../myndir/In.svg" alt="in" class="socials">
+        <img src="../myndir/Icon.svg" alt="icon" class="socials">
+      </div>
+    </div>
 
+    <div class="footer-section">
+      <h3>Verkefni</h3>
+      <ul>
+        <li><a href="#">Verkefni #1</a></li>
+        <li><a href="#">Verkefni #2</a></li>
+        <li><a href="#">Verkefni #3</a></li>
+        <li><a href="#">Verkefni #4</a></li>
+      </ul>
+    </div>
 
+    <div class="footer-section">
+      <h3>Lausnir</h3>
+      <ul>
+        <li><a href="#">Lausn #1</a></li>
+        <li><a href="#">Lausn #2</a></li>
+        <li><a href="#">Lausn #3</a></li>
+        <li><a href="#">Lausn #4</a></li>
+      </ul>
+    </div>
 
-
+    <div class="footer-section">
+      <h3>Síður</h3>
+      <ul>
+        <li><a href="#">Forsíða</a></li>
+        <li><a href="#">Lausnir</a></li>
+        <li><a href="#">Um okkur</a></li>
+        <li><a href="#">Starfsfólk</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
   
   </body>
 </html>

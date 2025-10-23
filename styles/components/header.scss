@@ -18,11 +18,11 @@ header {
     text-transform: uppercase;
   }
 
-  header nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  nav {
+    width: 100vw;
     height: var(--height-nav);
-    padding: 0 calc(var(--spacing) * 2);
+    background-color: var(--color-background-primary);
+    border-bottom: var(--border-nav);
   }
+  
 }
